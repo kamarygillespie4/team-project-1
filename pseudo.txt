@@ -1,0 +1,11 @@
+Team-projext-1: Movie database/Trailer Preview app:
+
+Utilizing 2 different APIs (TMDB and YouTube)
+
+The nav bar will have a dropdown menu with 5-6 different movie genres.
+
+Once selected, use TMBD api to get movie database info with movie title, the poster and a short description.
+Dynamically create cards containing that info to the home page with 6 cards in total.
+When the card is clicked there will be a modal with the selected movies trailer via youtube api.
+
+Icebox for changing the whole page theme based on the selected genre. i.e Black/red css theme for horror movies. 
