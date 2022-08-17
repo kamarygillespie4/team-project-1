@@ -7,6 +7,8 @@ var cardholder = $("#cardholder");
 var youtubeUrl =
   "https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?";
 var videoModal = $("#videoModal");
+var h2El = $("#h2El");
+var h3El = $("#h3El");
 
 
 //---------------------------
@@ -21,6 +23,7 @@ cardholder.hide();
 function generateCards() {
   //take the genre and grab the genre code to pull from database
   console.log(navSelector.value);
+
   cardholder.show();
 }
 //----------------------------
@@ -29,7 +32,7 @@ function generateCards() {
 //create a function to generate a modal containing the movie trailer pulled from youtube api
 function trailerModal() {
   //---------------------------
-  var src = "https://www.youtube.com";
+  var src = "https://www.youtube.com/embed/dQw4w9WgXcQ";
   $("#videoModal").modal("show");
   $("#videoModal iframe").attr("src", src);
 }
@@ -48,6 +51,10 @@ movieCard.on("click", function (event) {
 submitBtn.on("click", function (event) {
   event.preventDefault();
   generateCards();
+  document.getElementById("h2El").innerHTML =
+    "Now showing random " + navSelector.value + " movies!";
+  document.getElementById("h3El").innerHTML =
+    "Click on a movie to pull up the movie trailer!";
 });
 //--------------------------
 
