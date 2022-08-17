@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
@@ -26,14 +25,20 @@
             id="genrePicker"
             aria-label="Default select example"
           >
-            <option selected>Open this select menu</option>
-            <option value="1">Genre 1</option>
-            <option value="2">Genre 2</option>
-            <option value="3">Genre 3</option>
-            <option value="4">Genre 4</option>
-            <option value="5">Genre 5</option>
+            <option selected>Please select your movie genre!</option>
+            <option value="com">Comedy</option>
+            <option value="hor">Horror</option>
+            <option value="rom">Romance</option>
+            <option value="act">Action</option>
+            <option value="sci">Sci-fi</option>
           </select>
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button
+            class="btn btn-outline-success"
+            id="submitButton"
+            type="submit"
+          >
+            Search
+          </button>
         </form>
       </div>
     </nav>

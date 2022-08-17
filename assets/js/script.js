@@ -3,6 +3,7 @@
 var submitBtn = $("#submitButton");
 var movieCard = $(".movieCard");
 var navSelector = $("#genrePicker");
+
 //---------------------------
 
 //----------------------------
@@ -13,10 +14,8 @@ var navSelector = $("#genrePicker");
 //----------------------------
 //create a function to generate the movie cards based on the selected dropdown.
 function generateCards() {
-  //console log the selected genre
-  console.log(navSelector.val);
-
   //take the genre and grab the genre code to pull from database
+  console.log(navSelector.value);
 }
 //----------------------------
 
@@ -34,7 +33,8 @@ movieCard.on("click", function () {
 
 //---------------------------
 //add event listener to the submit button on the top of the page to take the selected genre and run the generateCards function for that genre.
-submitBtn.on("click", function () {
+submitBtn.on("click", function (event) {
+  event.preventDefault();
   generateCards();
 });
 //--------------------------

@@ -1,0 +1,10 @@
+.card img {
+    max-height: 285px;
+    height:284px; 
+    width:100%;
+    object-fit: fill;
+}
+
+/* #cardholder {
+    display:none;
+} */
