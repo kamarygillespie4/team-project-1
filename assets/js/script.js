@@ -8,6 +8,7 @@ var youtubeUrl =
   "https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?";
 var videoModal = $("#videoModal");
 
+
 //---------------------------
 
 //----------------------------
@@ -35,7 +36,9 @@ function trailerModal() {
 //---------------------------
 //add event listener to the movie card to run the trailerModal function to create a modal and display the youtube api corresponding movie trailer.
 movieCard.on("click", function (event) {
+
   // event.preventDefault();
+
   trailerModal();
 });
 //---------------------------
