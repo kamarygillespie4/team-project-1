@@ -10,7 +10,6 @@ var videoModal = $("#videoModal");
 var h2El = $("#h2El");
 var h3El = $("#h3El");
 
-
 //---------------------------
 
 //----------------------------
@@ -39,15 +38,14 @@ function trailerModal() {
 //---------------------------
 //add event listener to the movie card to run the trailerModal function to create a modal and display the youtube api corresponding movie trailer.
 movieCard.on("click", function (event) {
-
-  // event.preventDefault();
+  event.preventDefault();
 
   trailerModal();
 });
 //---------------------------
 
 //---------------------------
-//add event listener to the submit button on the top of the page to take the selected genre and run the generateCards function for that genre.
+//add event listener to the submit button on the top of the page to take the selected genre and run the generateCards function for that genre. Also will dynamically update the h2 and h3 text in the intro page when the submit button is clicked.
 submitBtn.on("click", function (event) {
   event.preventDefault();
   generateCards();
