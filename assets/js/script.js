@@ -6,6 +6,7 @@ var navSelector = $("#genrePicker");
 var cardholder = $("#cardholder");
 var youtubeUrl =
   "https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?";
+var videoModal = $("#videoModal");
 
 //---------------------------
 
@@ -25,13 +26,16 @@ function generateCards() {
 
 //-----------------------------
 //create a function to generate a modal containing the movie trailer pulled from youtube api
-function trailerModal() {}
-//---------------------------
-
+function trailerModal() {
+  //---------------------------
+  var src = "https://www.youtube.com";
+  $("#videoModal").modal("show");
+  $("#videoModal iframe").attr("src", src);
+}
 //---------------------------
 //add event listener to the movie card to run the trailerModal function to create a modal and display the youtube api corresponding movie trailer.
 movieCard.on("click", function (event) {
-  event.preventDefault();
+  // event.preventDefault();
   trailerModal();
 });
 //---------------------------
