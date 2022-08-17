@@ -2,12 +2,12 @@
 //designate global variables
 var submitBtn = $("#submitButton");
 var movieCard = $(".movieCard");
-var navSelector = "";
+var navSelector = $("#genrePicker");
 //---------------------------
 
 //----------------------------
 //select which elements will be hidden on initial page load
-randomelement.hide();
+// randomelement.hide();
 //----------------------------
 
 //----------------------------
