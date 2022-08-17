@@ -1,14 +1,17 @@
 //---------------------------
 //designate global variables
 var submitBtn = $("#submitButton");
-var movieCard = $(".movieCard");
+var movieCard = $(".card");
 var navSelector = $("#genrePicker");
+var cardholder = $("#cardholder");
+var youtubeUrl =
+  "https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?";
 
 //---------------------------
 
 //----------------------------
 //select which elements will be hidden on initial page load
-// randomelement.hide();
+cardholder.hide();
 //----------------------------
 
 //----------------------------
@@ -16,6 +19,7 @@ var navSelector = $("#genrePicker");
 function generateCards() {
   //take the genre and grab the genre code to pull from database
   console.log(navSelector.value);
+  cardholder.show();
 }
 //----------------------------
 
@@ -26,7 +30,8 @@ function trailerModal() {}
 
 //---------------------------
 //add event listener to the movie card to run the trailerModal function to create a modal and display the youtube api corresponding movie trailer.
-movieCard.on("click", function () {
+movieCard.on("click", function (event) {
+  event.preventDefault();
   trailerModal();
 });
 //---------------------------
@@ -38,3 +43,11 @@ submitBtn.on("click", function (event) {
   generateCards();
 });
 //--------------------------
+
+//---------------------
+//Set fetch for youtube api
+function getYTApi(youtubeUrl) {
+  fetch(youtubeUrl).then(function (response) {
+    console.log(response);
+  });
+}
