@@ -1,15 +1,24 @@
 .card img {
-    max-height: 285px;
-    height:284px; 
-    width:100%;
-    object-fit: fill;
+  max-height: 285px;
+  height: 284px;
+  width: 100%;
+  object-fit: fill;
+}
+
+.card:hover {
+  cursor: pointer;
 }
 
 #cardholder {
-
-    
 }
 
 /* #cardholder {
     display:none;
 } */
+
+/* Fonts for different Genres */
+/* font-family: 'Aboreto', cursive; - scifi
+font-family: 'DynaPuff', cursive; - comedy
+font-family: 'Edu VIC WA NT Beginner' cursive; -action
+font-family: 'Lobster', cursive; -romance
+font-family: 'Silkscreen', cursive; -horror */
