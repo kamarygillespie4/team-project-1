@@ -10,6 +10,7 @@ var videoModal = $("#videoModal");
 var h2El = $("#h2El");
 var h3El = $("#h3El");
 
+
 //---------------------------
 
 //----------------------------
@@ -38,7 +39,9 @@ function trailerModal() {
 //---------------------------
 //add event listener to the movie card to run the trailerModal function to create a modal and display the youtube api corresponding movie trailer.
 movieCard.on("click", function (event) {
+
   // event.preventDefault();
+
   trailerModal();
 });
 //---------------------------
