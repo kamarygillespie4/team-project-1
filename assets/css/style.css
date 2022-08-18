@@ -9,6 +9,10 @@
     cursor: pointer;
 }
 
+.hide {
+    display: none;
+}
+
 
 /* #cardholder {} */
 
