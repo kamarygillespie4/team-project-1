@@ -1,10 +1,21 @@
 //----------------------------
+//designate global variables
+var submitBtn = $("#submitButton");
+var movieCard = $(".card");
+var navSelector = $("#genrePicker");
+var cardholder = $("#cardholder");
+var youtubeUrl =
+  "https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?";
+var introPage = $("#intro-page");
+var videoModal = $("#videoModal");
+var h2El = $("#h2El");
+var h3El = $("#h3El");
 //TMBD variables
 var apiKey = "api_key=e615b777f7066471620865b8f7eaf6ab";
 var baseUrl = "https://api.themoviedb.org/3";
 var apiUrl = baseUrl + "/discover/movie?sort_by=popularity.desc&" + apiKey;
 var imgUrl = "https://image.tmdb.org/t/p/w500";
-var cardholder = document.getElementById("cardholder");
+// var cardholder = document.getElementById("cardholder");
 //---------------------------
 
 //--------------------------
@@ -72,22 +83,9 @@ function showMovies(data) {
           <p class="card-text">${overview}</p>
         </div>`;
 
-    cardholder.appendChild(movieEl);
+    cardholder.append(movieEl);
   });
 }
-//---------------------------
-
-//---------------------------
-//designate global variables
-var submitBtn = $("#submitButton");
-var movieCard = $(".card");
-var navSelector = $("#genrePicker");
-// var cardholder = $("#cardholder");
-var youtubeUrl =
-  "https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?";
-var videoModal = $("#videoModal");
-var h2El = $("#h2El");
-var h3El = $("#h3El");
 //---------------------------
 
 //----------------------------
@@ -127,6 +125,7 @@ movieCard.on("click", function (event) {
 submitBtn.on("click", function (event) {
   event.preventDefault();
   generateCards();
+  introPage.hide();
   document.getElementById("h2El").innerHTML =
     "Now showing random " + navSelector.value + " movies!";
   document.getElementById("h3El").innerHTML =
