@@ -16,6 +16,10 @@
   height: 100vh;
 }
 
+nav {
+  display: flex;
+  position: fixed;
+}
 /* #cardholder {
     display:none;
 } */
