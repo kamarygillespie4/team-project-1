@@ -40,3 +40,7 @@ font-family: 'Silkscreen', cursive; -horror */
   font-size: xx-large;
   color: aliceblue;
 }
+
+#cardholder background-image {
+  position: fixed;
+}
