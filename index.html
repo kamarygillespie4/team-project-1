@@ -28,7 +28,7 @@
   </head>
 
   <body>
-    <nav class="navbar bg-dark pt-3">
+    <nav class="navbar bg-dark py-3">
       <div class="container-fluid justify-content-center w-75">
         <form class="d-flex col-6" role="search" id="btn-submit">
           <select
@@ -54,7 +54,7 @@
       <!-- card 1 -->
       <section
         id="cardholder"
-        class="row justify-content-center gap-3 row-cols-1 row-cols-md-3 g-4"
+        class="row justify-content-center gap-3 row-cols-1 row-cols-md-3 my-auto g-4"
       >
         <!-- Modal -->
         <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -99,29 +99,26 @@
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Movie Trailer</h5>
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content bg-dark">
+            <div class="modal-header ">
+              <h5 class="modal-title text-white" id="exampleModalLabel">Movie Trailer</h5>
               <button
                 type="button"
-                class="btn-close"
+                class="btn-close btn-close-white"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body"><iframe
-                width="560"
-                height="315"
+            <div class="modal-body d-flex"><iframe
+                width="1366"
+                height="728"
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen=""
               ></iframe></div>
-            <div class="modal-footer">
-              
-            </div>
           </div>
         </div>
       </div>
