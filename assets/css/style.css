@@ -14,6 +14,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  background-attachment: fixed;
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 nav {
@@ -41,6 +49,6 @@ font-family: 'Silkscreen', cursive; -horror */
   color: aliceblue;
 }
 
-#cardholder background-image {
+/* #cardholder background-image {
   position: fixed;
-}
+} */
