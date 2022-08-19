@@ -5,7 +5,7 @@ var movieCard = $(".card");
 var navSelector = $("#genrePicker");
 var cardholder = $("#cardholder");
 var youtubeUrl =
-  "https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?";
+  "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBBpyA_FhpagYzYlPCI3Q440ghki-kAEPA&safeSearch=moderate&q=";
 var introPage = $("#intro-page");
 var videoModal = $("#videoModal");
 var h2El = $("#h2El");
@@ -97,7 +97,8 @@ cardholder.hide();
 //create a function to generate the movie cards based on the selected dropdown.
 function generateCards() {
   //take the genre and grab the genre code to pull from database
-  console.log(navSelector.value);
+
+  console.log(navSelector.val());
 
   cardholder.show();
 }
@@ -123,10 +124,16 @@ movieCard.on("click", function (event) {
 //add event listener to the submit button on the top of the page to take the selected genre and run the generateCards function for that genre. Also will dynamically update the h2 and h3 text in the intro page when the submit button is clicked.
 submitBtn.on("click", function (event) {
   event.preventDefault();
+  var searchInput = navSelector.val();
+  getYTApi(searchInput);
+  //console.log(searchInput);
+  // if (!searchInput) {
+  //   return;
+  // }
   generateCards();
   introPage.hide();
   document.getElementById("h2El").innerHTML =
-    "Now showing random " + navSelector.value + " movies!";
+    "Now showing random " + searchInput + " movies!";
   document.getElementById("h3El").innerHTML =
     "Click on a movie to pull up the movie trailer!";
 });
@@ -134,8 +141,27 @@ submitBtn.on("click", function (event) {
 
 //---------------------
 //Set fetch for youtube api
-function getYTApi(youtubeUrl) {
-  fetch(youtubeUrl).then(function (response) {
-    console.log(response);
-  });
+function getYTApi(searchTerm) {
+  // fetch(youtubeUrl).then(function (response) {
+  //   console.log(response);
+  // });
+  fetch(
+    youtubeUrl + searchTerm
+    // "https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?&key=e615b777f7066471620865b8f7eaf6ab"
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      for (var i = 0; i < data.items.length; i++) {
+        var videoId = data.items[i].id.videoId;
+        //console.log(data.items[i].id.videoId);
+        //https://youtu.be/VIDEOID GOES HERE!!
+        var videoUrl = "https://youtu.be/" + videoId;
+        console.log(videoUrl);
+      }
+      // showMovies(data.items);
+    });
 }
+
+//www.googleapis.com/youtube/v3
+
+//AIzaSyBBpyA_FhpagYzYlPCI3Q440ghki-kAEPA
