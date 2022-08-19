@@ -74,7 +74,9 @@ function showMovies(data) {
     var movieEl = document.createElement("div");
     movieEl.classList.add("movie");
     movieEl.innerHTML = `
-    <div class="card justify-content-center" style="min-height: 285px; width:575px;">
+    <div class="card justify-content-center" style="min-height: 285px; width:575px;"
+    
+    >
       <div class="row g-0">
         <div class="col-md-4">
           <img src="${
@@ -84,7 +86,8 @@ function showMovies(data) {
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title">${title}</h5>
-          <p class="card-text">${overview}</p>
+          <p class="card-text">${overview}</p> <button data-bs-target="#videoModal"
+    data-bs-toggle="modal">Click Here</button>
         </div>`;
     cardholder.append(movieEl);
   });
@@ -101,14 +104,16 @@ cardholder.hide();
 function trailerModal() {
   //---------------------------
   var src = "https://www.youtube.com/embed/dQw4w9WgXcQ";
-  $("#videoModal").modal("show");
+  $("#videoModal").show;
   $("#videoModal iframe").attr("src", src);
 }
 //---------------------------
 //add event listener to the movie card to run the trailerModal function to create a modal and display the youtube api corresponding movie trailer.
-movieCard.on("click", function (event) {
-  event.preventDefault();
-  trailerModal();
+// $(".card").on("click", function () {
+$("#cardholder").on("click", ".card", function (e) {
+  console.log("test");
+  console.log(e.target);
+  // trailerModal();
 });
 //---------------------------
 
