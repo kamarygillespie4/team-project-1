@@ -20,18 +20,15 @@
   
     <nav class="navbar bg-dark pt-3">
         <div class="container-fluid justify-content-center w-75">
-            <form class="d-flex col-6" role="search">
+            <form class="d-flex col-6" role="search" id="btn-submit">
                 <select class="form-select" id="genrePicker" aria-label="Default select example">
             <option selected>Please select your movie genre!</option>
-            <option value="comedy" id="comedy">Comedy</option>
-            <option value="horror" id="horror">Horror</option>
-            <option value="romance" id="romance">Romance</option>
-            <option value="action" id="action">Action</option>
-            <option value="sci_fi" id="scifi">Sci-fi</option>
+            <option value="35" id="35">Comedy</option>
+            <option value="27" id="27">Horror</option>
+            <option value="10749" id="10749">Romance</option>
+            <option value="28" id="28">Action</option>
+            <option value="878" id="878">Sci-fi</option>
           </select>
-                <button class="btn btn-outline-danger mx-2" id="submitButton" type="submit">
-            Search
-          </button>
             </form>
         </div>
     </nav>
@@ -41,7 +38,7 @@
             <h3 id="h3El">Pick a genre to find a movie and watch the trailer!</h3>
         </section>
         <!-- card 1 -->
-        <section id="cardholder" class="row justify-content-center gap-3">
+        <section id="cardholder" class="row justify-content-center gap-3 row-cols-1 row-cols-md-3 g-4">
             <!-- <div class="card justify-content-center" style="min-height: 285px; width: 575px">
                 <div class="row g-0">
                     <div class="col-md-4">
@@ -91,69 +88,69 @@
             </div>
             <!-- card 4 -->
             <!-- <div class="card justify-content-center" style="min-height: 285px; width: 575px"> -->
-                <!-- <div class="row g-0"> -->
-                    <!-- <div class="col-md-4"> -->
-                        <!-- <img src="" class="rounded-start" alt="..." /> -->
-                    <!-- </div> -->
-                    <!-- <div class="col-md-8"> -->
-                        <!-- <div class="card-body"> -->
-                            <!-- <h5 class="card-title">Movie title</h5> -->
-                            <!-- <p class="card-text"> -->
-                                <!-- Movie Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam ipsa sapiente velit aliquam aliquid assumenda ducimus, suscipit exercitationem eius iusto? -->
-                            <!-- </p> --> 
-                        <!-- </div> --> 
-                    <!-- </div> -->
-                <!-- </div> -->
+            <!-- <div class="row g-0"> -->
+            <!-- <div class="col-md-4"> -->
+            <!-- <img src="" class="rounded-start" alt="..." /> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-8"> -->
+            <!-- <div class="card-body"> -->
+            <!-- <h5 class="card-title">Movie title</h5> -->
+            <!-- <p class="card-text"> -->
+            <!-- Movie Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam ipsa sapiente velit aliquam aliquid assumenda ducimus, suscipit exercitationem eius iusto? -->
+            <!-- </p> -->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- </div> -->
             <!-- </div> -->
             <!-- card 5 -->
             <!-- <div class="card justify-content-center" style="min-height: 285px; width: 575px"> -->
-                <!-- <div class="row g-0"> -->
-                    <!-- <div class="col-md-4"> -->
-                        <!-- <img src="" class="rounded-start" alt="..." /> -->
-                    <!-- </div> -->
-                    <!-- <div class="col-md-8"> -->
-                        <!-- <div class="card-body"> -->
-                            <!-- <h5 class="card-title">Movie title</h5> -->
-                            <!-- <p class="card-text"> -->
-                                <!-- Movie Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam ipsa sapiente velit aliquam aliquid assumenda ducimus, suscipit exercitationem eius iusto? -->
-                            <!-- </p> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </div> -->
+            <!-- <div class="row g-0"> -->
+            <!-- <div class="col-md-4"> -->
+            <!-- <img src="" class="rounded-start" alt="..." /> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-8"> -->
+            <!-- <div class="card-body"> -->
+            <!-- <h5 class="card-title">Movie title</h5> -->
+            <!-- <p class="card-text"> -->
+            <!-- Movie Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam ipsa sapiente velit aliquam aliquid assumenda ducimus, suscipit exercitationem eius iusto? -->
+            <!-- </p> -->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- </div> -->
             <!-- </div> -->
             <!-- card 6 -->
             <!-- <div class="card justify-content-center" style="min-height: 285px; width: 575px"> -->
-                <!-- <div class="row g-0"> -->
-                    <!-- <div class="col-md-4"> -->
-                        <!-- <img src="" class="rounded-start" alt="..." /> -->
-                    <!-- </div> -->
-                    <!-- <div class="col-md-8"> -->
-                        <!-- <div class="card-body"> -->
-                            <!-- <h5 class="card-title">Movie title</h5> -->
-                            <!-- <p class="card-text"> -->
-                                <!-- Movie Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam ipsa sapiente velit aliquam aliquid assumenda ducimus, suscipit exercitationem eius iusto? -->
-                            <!-- </p> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </div> -->
-            <!-- </div> --> 
-        <!-- </section> -->
+            <!-- <div class="row g-0"> -->
+            <!-- <div class="col-md-4"> -->
+            <!-- <img src="" class="rounded-start" alt="..." /> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-8"> -->
+            <!-- <div class="card-body"> -->
+            <!-- <h5 class="card-title">Movie title</h5> -->
+            <!-- <p class="card-text"> -->
+            <!-- Movie Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam ipsa sapiente velit aliquam aliquid assumenda ducimus, suscipit exercitationem eius iusto? -->
+            <!-- </p> -->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- </section> -->
 
-        <!-- Modal -->
-        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Movie Trailer</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!-- Modal -->
+            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Movie Trailer</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></iframe>
+                        </div>
+                        <div class="modal-footer"></div>
                     </div>
-                    <div class="modal-body">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></iframe>
-                    </div>
-                    <div class="modal-footer"></div>
                 </div>
             </div>
-        </div>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
