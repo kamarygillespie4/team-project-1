@@ -87,7 +87,7 @@ function showMovies(data) {
         <div class="card-body">
           <h5 class="card-title">${title}</h5>
           <p class="card-text">${overview}</p> <button data-bs-target="#videoModal"
-    data-bs-toggle="modal">Click Here</button>
+    data-bs-toggle="modal">Click Here for trailer</button>
         </div>`;
     cardholder.append(movieEl);
   });
