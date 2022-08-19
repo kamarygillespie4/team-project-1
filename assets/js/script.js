@@ -1,5 +1,6 @@
 //----------------------------
 //designate global variables
+var formEl = $("#btn-submit");
 var submitBtn = $("#submitButton");
 var movieCard = $(".card");
 var navSelector = $("#genrePicker");
@@ -10,10 +11,12 @@ var introPage = $("#intro-page");
 var videoModal = $("#videoModal");
 var h2El = $("#h2El");
 var h3El = $("#h3El");
+var selectedGenre;
+
 //TMBD variables
 var apiKey = "api_key=e615b777f7066471620865b8f7eaf6ab";
-var baseUrl = "https://api.themoviedb.org/3";
-var apiUrl = baseUrl + "/discover/movie?sort_by=popularity.desc&" + apiKey;
+var baseUrl = "https://api.themoviedb.org/3/discover/movie?";
+// var apiUrl = baseUrl + apiKey + "&with_genres=" + selectedGenre;
 var imgUrl = "https://image.tmdb.org/t/p/w500";
 // var cardholder = document.getElementById("cardholder");
 //---------------------------
@@ -44,18 +47,24 @@ var imgUrl = "https://image.tmdb.org/t/p/w500";
 
 //---------------------------
 //call getMovies function
-getMovies(apiUrl);
+// getMovies(apiUrl);
 //---------------------------
 
 //---------------------------
 //create a function to fetch movies from TMBD api
-function getMovies(url) {
-  console.log(url);
-  fetch(url)
+function getMovies() {
+  $("#cardholder").empty();
+  var optionValue = $("#genrePicker").val();
+  var apiUrl = baseUrl + apiKey + "&with_genres=" + optionValue;
+  console.log(apiUrl);
+
+  fetch(apiUrl)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
       showMovies(data);
+      cardholder.show();
+      introPage.hide();
     });
 }
 //----------------------------
@@ -82,7 +91,6 @@ function showMovies(data) {
           <h5 class="card-title">${title}</h5>
           <p class="card-text">${overview}</p>
         </div>`;
-
     cardholder.append(movieEl);
   });
 }
@@ -95,12 +103,7 @@ cardholder.hide();
 
 //----------------------------
 //create a function to generate the movie cards based on the selected dropdown.
-function generateCards() {
-  //take the genre and grab the genre code to pull from database
-  console.log(navSelector.value());
 
-  cardholder.show();
-}
 //----------------------------
 
 //-----------------------------
@@ -121,15 +124,9 @@ movieCard.on("click", function (event) {
 
 //---------------------------
 //add event listener to the submit button on the top of the page to take the selected genre and run the generateCards function for that genre. Also will dynamically update the h2 and h3 text in the intro page when the submit button is clicked.
-submitBtn.on("click", function (event) {
-  event.preventDefault();
-  generateCards();
-  introPage.hide();
-  document.getElementById("h2El").innerHTML =
-    "Now showing random " + navSelector.value + " movies!";
-  document.getElementById("h3El").innerHTML =
-    "Click on a movie to pull up the movie trailer!";
-});
+// formEl.on("submit", getMovies);
+
+navSelector.on("change", getMovies);
 //--------------------------
 
 //---------------------
