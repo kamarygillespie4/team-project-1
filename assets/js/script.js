@@ -97,7 +97,7 @@ cardholder.hide();
 //create a function to generate the movie cards based on the selected dropdown.
 function generateCards() {
   //take the genre and grab the genre code to pull from database
-  console.log(navSelector.value);
+  console.log(navSelector.value());
 
   cardholder.show();
 }
