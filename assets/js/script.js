@@ -4,8 +4,9 @@ var submitBtn = $("#submitButton");
 var movieCard = $(".card");
 var navSelector = $("#genrePicker");
 var cardholder = $("#cardholder");
-var youtubeUrl =
-  "https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?";
+var youtubeUrl = "https://www.googleapis.com/youtube/v3";
+var youtubeApi = "api_key = AIzaSyBNt_y938eyIof4sZhdpK8D0a9CACz70xE";
+var youtubeApiUrl = youtubeUrl + "/&" + youtubeApi;
 var introPage = $("#intro-page");
 var videoModal = $("#videoModal");
 var h2El = $("#h2El");
@@ -113,7 +114,7 @@ function trailerModal() {
 }
 //---------------------------
 //add event listener to the movie card to run the trailerModal function to create a modal and display the youtube api corresponding movie trailer.
-movieCard.on("click", function (event) {
+cardholder.on("click", function (event) {
   event.preventDefault();
   trailerModal();
 });
