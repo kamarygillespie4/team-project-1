@@ -1,25 +1,30 @@
 .card img {
-    max-height: 285px;
-    height: 284px;
-    width: 100%;
-    object-fit: fill;
+  max-height: 285px;
+  height: 284px;
+  width: 100%;
+  object-fit: fill;
 }
 
 .card:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
+#cardholder {
+  background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW92aWUlMjB0aGVhdGVyfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
 
-/* #cardholder {} */
-
-
+nav {
+  display: flex;
+  position: fixed;
+}
 /* #cardholder {
     display:none;
 } */
 
-
 /* Fonts for different Genres */
-
 
 /* font-family: 'Aboreto', cursive; - scifi
 font-family: 'DynaPuff', cursive; - comedy
@@ -28,10 +33,14 @@ font-family: 'Lobster', cursive; -romance
 font-family: 'Silkscreen', cursive; -horror */
 
 #intro-page {
-    background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW92aWUlMjB0aGVhdGVyfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    font-size: xx-large;
-    color: aliceblue;
+  background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW92aWUlMjB0aGVhdGVyfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-size: xx-large;
+  color: aliceblue;
+}
+
+#cardholder background-image {
+  position: fixed;
 }
