@@ -59,7 +59,7 @@ function getMovies() {
             console.log(data);
             if (data.results.length > 6) data.results.length = 6;
             showMovies(data);
-            
+
             cardholder.show();
             introPage.hide();
         });
@@ -76,9 +76,7 @@ function showMovies(data) {
         var movieEl = document.createElement("div");
         movieEl.classList.add("movie");
         movieEl.innerHTML = `
-    <div class="card justify-content-center" style="min-height: 285px; width:575px;"
-    
-    >
+    <div class="card justify-content-center" style="min-height: 285px; width:575px; padding:4px">
       <div class="row">
         <div class="col-md-4">
           <img src="${
@@ -109,7 +107,7 @@ function trailerModal() {
     $("#videoModal").show;
     $("#videoModal iframe").attr("src", src);
     $("videoModal").click(function() {
-        
+
     })
 }
 //---------------------------
