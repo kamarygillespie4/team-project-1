@@ -1,39 +1,42 @@
 .card img {
-  max-height: 285px;
-  height: 284px;
-  width: 100%;
-  object-fit: fill;
+    max-height: 285px;
+    height: 284px;
+    width: 100%;
+    object-fit: fill;
 }
 
 .card:hover {
-  cursor: pointer;
-  opacity: 0.6;
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 #cardholder {
-  background-image: url("https://media2.dallasobserver.com/dal/imager/u/magnum/11934937/movie-theater-cred-felix-mooneram-unsplash.jpg?cb=1642542354");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  background-attachment: fixed;
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: url("https://media2.dallasobserver.com/dal/imager/u/magnum/11934937/movie-theater-cred-felix-mooneram-unsplash.jpg?cb=1642542354");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 nav {
-  display: flex;
-  position: fixed;
+    display: flex;
+    position: fixed;
 }
+
+
 /* #cardholder {
     display:none;
 } */
 
+
 /* Fonts for different Genres */
+
 
 /* font-family: 'Aboreto', cursive; - scifi
 font-family: 'DynaPuff', cursive; - comedy
@@ -42,14 +45,19 @@ font-family: 'Lobster', cursive; -romance
 font-family: 'Silkscreen', cursive; -horror */
 
 #intro-page {
-  background-image: url("https://media2.dallasobserver.com/dal/imager/u/magnum/11934937/movie-theater-cred-felix-mooneram-unsplash.jpg?cb=1642542354");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  font-size: xx-large;
-  color: aliceblue;
+    background-image: url("https://media2.dallasobserver.com/dal/imager/u/magnum/11934937/movie-theater-cred-felix-mooneram-unsplash.jpg?cb=1642542354");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-size: xx-large;
+    color: aliceblue;
 }
+
 
 /* #cardholder background-image {
   position: fixed;
 } */
+
+.card-text {
+    font-size: small;
+}
