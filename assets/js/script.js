@@ -52,6 +52,7 @@ function getMovies() {
     var optionValue = $("#genrePicker").val();
     var apiUrl = baseUrl + apiKey + "&with_genres=" + optionValue;
     console.log(apiUrl);
+    localStorage.setItem("TMDBgenreID", optionValue);
 
     fetch(apiUrl)
         .then((res) => res.json())
