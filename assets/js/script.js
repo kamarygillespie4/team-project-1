@@ -7,7 +7,7 @@ var navSelector = $("#genrePicker");
 var cardholder = $("#cardholder");
 
 var youtubeUrl =
-    "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBBpyA_FhpagYzYlPCI3Q440ghki-kAEPA&safeSearch=moderate&q=";
+    "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDpAiH77kOpsnqTjCseeXYb0fyfMIfduxg&safeSearch=moderate&q=";
 
 var introPage = $("#intro-page");
 var videoModal = $("#videoModal");
@@ -57,7 +57,9 @@ function getMovies() {
         .then((res) => res.json())
         .then((data) => {
             console.log(data);
+            if (data.results.length > 6) data.results.length = 6;
             showMovies(data);
+            
             cardholder.show();
             introPage.hide();
         });
@@ -106,6 +108,9 @@ function trailerModal() {
     var src = "https://www.youtube.com/embed/dQw4w9WgXcQ";
     $("#videoModal").show;
     $("#videoModal iframe").attr("src", src);
+    $("videoModal").click(function() {
+        
+    })
 }
 //---------------------------
 //add event listener to the movie card to run the trailerModal function to create a modal and display the youtube api corresponding movie trailer.
