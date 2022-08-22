@@ -7,7 +7,7 @@ var navSelector = $("#genrePicker");
 var cardholder = $("#cardholder");
 
 var youtubeUrl =
-    "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDpAiH77kOpsnqTjCseeXYb0fyfMIfduxg&safeSearch=moderate&q=";
+    "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAJULYoJ7DcBq24d_dVVd1KKZ8l688FoeI&safeSearch=moderate&q=";
 
 var introPage = $("#intro-page");
 var videoModal = $("#videoModal");
